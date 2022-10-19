@@ -3,6 +3,7 @@ class CreateExercises < ActiveRecord::Migration[6.1]
     create_table :exercises do |t|
       t.string :name
       t.integer :reps
+      t.integer :workout_id
     end
   end
 end
