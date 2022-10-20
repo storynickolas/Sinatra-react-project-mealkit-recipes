@@ -1,5 +1,6 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
+
   
   # Add your routes here
   get "/1" do
@@ -11,7 +12,13 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/3" do
-    Workout.third.exercises.to_json
+    Workout.second.exercises.to_json
   end
+
+  get "/workout" do
+    Workout.all.to_json
+  end
+
+  
 
 end
