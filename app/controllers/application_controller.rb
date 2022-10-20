@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/workout" do
-    Workout.all.to_json
+    Workout.all.to_json(include: :exercises)
   end
 
   
