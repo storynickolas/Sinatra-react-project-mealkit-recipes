@@ -1,8 +1,8 @@
 puts "🌱 Seeding spices..."
 
 # Seed your database here
-Workout.create(name: "Cardio")
-Exercise.create(name: "Rowing", reps: 30, workout_id: 1)
+Workout.create(name: "Rest")
+Exercise.create(name: "Rest", workout_id: 1)
 
 Workout.create(name: "Chest")
 Exercise.create(name: "Bench", reps: 4, workout_id: 2)
@@ -27,6 +27,9 @@ Exercise.create(name: "Shoulder Press", reps: 4, workout_id: 5)
 Exercise.create(name: "Front Raises", reps: 4, workout_id: 5)
 Exercise.create(name: "Side Raises", reps: 4, workout_id: 5)
 Exercise.create(name: "Shrugs", reps: 4, workout_id: 5)
+
+Workout.create(name: "Cardio")
+Exercise.create(name: "Rowing", reps: 30, workout_id: 6)
 
 
 
