@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2022_11_05_234214) do
     t.string "protein"
     t.integer "cook_time"
     t.string "instructions"
+    t.string "image"
   end
 
   create_table "workouts", force: :cascade do |t|

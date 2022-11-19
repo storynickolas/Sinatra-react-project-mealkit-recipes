@@ -5,6 +5,7 @@ class CreateRecipes < ActiveRecord::Migration[6.1]
       t.string :protein
       t.integer :cook_time
       t.string :instructions
+      t.string :image
     end
   end
 end
