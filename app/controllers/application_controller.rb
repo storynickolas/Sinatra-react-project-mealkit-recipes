@@ -35,17 +35,17 @@ class ApplicationController < Sinatra::Base
 
   get '/recipes/by_time' do
     time = Recipe.by_time
-    time.to_json
+    time.to_json(include: :ingredients)
   end
 
   get '/recipes/quick' do
     time = Recipe.time_opp
-    time.to_json
+    time.to_json(include: :ingredients)
   end
 
   get '/recipes/shortest' do
     time = Recipe.by_time.last
-    time.to_json
+    time.to_json(include: :ingredients)
   end
 
   get '/recipes/quantity' do
