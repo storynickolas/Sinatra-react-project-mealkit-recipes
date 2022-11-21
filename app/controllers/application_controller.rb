@@ -23,6 +23,10 @@ class ApplicationController < Sinatra::Base
     Recipe.all.to_json(include: :ingredients)
   end
 
+  get "/ingredients" do
+    Ingredient.all.to_json
+  end
+
   get '/recipes/chicken' do
     chicken = Recipe.where(protein: 'Chicken')
     chicken.to_json(include: :ingredients)
@@ -83,6 +87,14 @@ class ApplicationController < Sinatra::Base
     recipe = Recipe.find(params[:id])
     recipe.destroy
     recipe.to_json
+  end
+
+  post '/ingredients' do
+    ingredient = Ingredient.create(
+    name: params[:name],
+    recipe_id: params[:recipe_id]
+    )
+  ingredient.to_json
   end
 
 
