@@ -69,7 +69,7 @@ class ApplicationController < Sinatra::Base
     cook_time: params[:cook_time],
     instructions: params[:instructions]
     )
-    recipe.to_json
+    recipe.to_json(include: :ingredients)
   end
 
   patch '/recipes/:id' do
