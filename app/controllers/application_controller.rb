@@ -3,26 +3,6 @@ class ApplicationController < Sinatra::Base
 
   
   # Add your routes here
-  get "/1" do
-    Workout.first.exercises.to_json
-  end
-
-  get "/2" do
-    Workout.second.exercises.to_json
-  end
-
-  get "/3" do
-    Workout.second.exercises.to_json
-  end
-
-  get "/workout" do
-    Workout.all.to_json(include: :exercises)
-  end
-
-  get "/recipes" do
-    Recipe.all.to_json(include: :ingredients)
-  end
-
   get "/ingredients" do
     Ingredient.all.to_json
   end
@@ -65,6 +45,7 @@ class ApplicationController < Sinatra::Base
   post '/recipes' do
     recipe = Recipe.create(
     name: params[:name],
+    image: params[:image],
     protein: params[:protein],
     cook_time: params[:cook_time],
     instructions: params[:instructions]
@@ -96,8 +77,5 @@ class ApplicationController < Sinatra::Base
     )
   ingredient.to_json
   end
-
-
-  
 
 end
