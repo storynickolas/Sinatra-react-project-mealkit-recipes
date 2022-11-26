@@ -12,12 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2022_11_05_234214) do
 
-  create_table "exercises", force: :cascade do |t|
-    t.string "name"
-    t.integer "reps"
-    t.integer "workout_id"
-  end
-
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
     t.integer "recipe_id"
@@ -29,10 +23,6 @@ ActiveRecord::Schema.define(version: 2022_11_05_234214) do
     t.integer "cook_time"
     t.string "instructions"
     t.string "image"
-  end
-
-  create_table "workouts", force: :cascade do |t|
-    t.string "name"
   end
 
 end

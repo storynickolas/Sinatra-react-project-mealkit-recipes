@@ -3,6 +3,10 @@ class ApplicationController < Sinatra::Base
 
   
   # Add your routes here
+  get "/recipes" do
+    Recipe.all.to_json(include: :ingredients)
+  end
+
   get "/ingredients" do
     Ingredient.all.to_json
   end
