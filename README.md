@@ -19,10 +19,23 @@ This will copy all the files from this repo down to your computer
 
 In your terminal, cd into the directory you just created
 
-```bash
-npm install 
-```
 to install all dependencies 
+
+```bash
+bundle install
+```
+
+generate migrations
+
+```bash
+bundle exec rake db:migrate
+```
+
+Seed sample data
+
+```bash
+bundle exec rake db:seed
+```
 
 Finally,
 
